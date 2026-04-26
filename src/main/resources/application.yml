@@ -1,5 +1,10 @@
 server:
   port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
 
 spring:
   application:
@@ -10,6 +15,12 @@ spring:
       max-file-size: 500MB
       max-request-size: 500MB
       enabled: true
+  
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
 
 file:
   upload:
