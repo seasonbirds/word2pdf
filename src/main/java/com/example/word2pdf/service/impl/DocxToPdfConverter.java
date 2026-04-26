@@ -34,8 +34,6 @@ public class DocxToPdfConverter implements WordToPdfConverter {
     public void convert(InputStream inputStream, OutputStream outputStream) throws IOException {
         try (XWPFDocument document = new XWPFDocument(inputStream)) {
             PdfOptions options = PdfOptions.create();
-            // 配置PDF转换选项，保持原有样式
-            options.setFontEncoding("UTF-8");
             // 执行转换
             PdfConverter.getInstance().convert(document, outputStream, options);
         }
