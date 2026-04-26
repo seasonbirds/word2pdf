@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: word2pdf
+  
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+      enabled: true
+
+file:
+  upload:
+    temp-dir: ${java.io.tmpdir}/word2pdf
+    max-size: 524288000
+
+logging:
+  level:
+    com.example.word2pdf: DEBUG
+    org.springframework: INFO
